@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Law & Intellectual Property - Syllabus</title>
+    <meta name="description" content="Cyber Law & Intellectual Property - High-yield exam topics categorized by unit with exam strategy.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient-start: #0f172a;
+            --bg-gradient-end: #1e1e3f;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --card-border: rgba(148, 163, 184, 0.15);
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --accent-glow: #38bdf8;
+            --accent-color: #818cf8;
+            --highlight: #c084fc;
+            --green: #34d399;
+            --yellow: #fbbf24;
+            --red: #f87171;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            margin: 0;
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 5px;
+            letter-spacing: -0.02em;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            background: -webkit-linear-gradient(right, var(--accent-glow), var(--highlight));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 50px;
+            font-weight: 500;
+        }
+
+        .unit-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            transform-origin: center;
+        }
+
+        .unit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .unit-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 50px -10px rgba(56, 189, 248, 0.2);
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+
+        .unit-card:hover::before {
+            left: 150%;
+        }
+
+        .unit-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .unit-badge {
+            background: rgba(192, 132, 252, 0.15);
+            color: var(--highlight);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 1rem;
+            font-weight: 700;
+            border: 1px solid rgba(192, 132, 252, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .topics-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .topics-list li {
+            position: relative;
+            padding-left: 32px;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .topics-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .topics-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--accent-glow);
+            font-size: 1.2rem;
+            filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.5));
+        }
+
+        .topic-strong {
+            color: #ffffff;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+
+        /* Summary Table */
+        .summary-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .summary-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .summary-table thead th {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-glow);
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 2px solid rgba(56, 189, 248, 0.25);
+        }
+
+        .summary-table tbody td {
+            padding: 14px 16px;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            color: var(--text-primary);
+        }
+
+        .summary-table tbody tr {
+            transition: background 0.3s ease;
+        }
+
+        .summary-table tbody tr:hover {
+            background: rgba(56, 189, 248, 0.06);
+        }
+
+        .summary-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Practice Questions */
+        .questions-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(192, 132, 252, 0.25);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .questions-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 22px;
+            text-align: center;
+        }
+
+        .questions-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            counter-reset: q-counter;
+        }
+
+        .questions-list li {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            counter-increment: q-counter;
+        }
+
+        .questions-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .questions-list li::before {
+            content: "Q" counter(q-counter);
+            position: absolute;
+            left: 0;
+            top: 1px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--highlight);
+            background: rgba(192, 132, 252, 0.12);
+            padding: 2px 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(192, 132, 252, 0.25);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            .unit-card, .summary-card, .questions-card {
+                padding: 25px;
+            }
+            .unit-title {
+                font-size: 1.4rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .summary-table thead th,
+            .summary-table tbody td {
+                padding: 10px 8px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cyber Law & Intellectual Property</h1>
+        <p class="subtitle">High-Yield Exam Topics — Unit-by-Unit Analysis</p>
+
+        <!-- UNIT 1 -->
+        <div class="unit-card">
+            <h2 class="unit-title"><span class="unit-badge">UNIT 1</span> Introduction to Cybercrimes</h2>
+            <ul class="topics-list">
+                <li><span class="topic-strong">Classes and Categories of Cybercrime:</span> Definitions and clear distinctions between different types.</li>
+                <li><span class="topic-strong">Specific Targeted Crimes:</span> Cybercrimes against women and children.</li>
+                <li><span class="topic-strong">Financial Frauds:</span> Understanding the mechanics of online financial crimes.</li>
+                <li><span class="topic-strong">Social Engineering:</span> Techniques and definitions of social engineering attacks.</li>
+            </ul>
+        </div>
+
+        <!-- UNIT 2 -->
+        <div class="unit-card">
+            <h2 class="unit-title"><span class="unit-badge">UNIT 2</span> Cybercrime and Cyber Law</h2>
+            <ul class="topics-list">
+                <li><span class="topic-strong">IT Act 2000:</span> This is a critical legal framework; focus on its Amendments, various Offences, and legal perspectives.</li>
+                <li><span class="topic-strong">Modern Attack Vectors:</span> Definitions of Ransomware, Zero-day, and Zero-click attacks.</li>
+                <li><span class="topic-strong">Cyber Security Organizations:</span> Knowledge of Indian organizations dealing with cybercrime.</li>
+            </ul>
+        </div>
+
+        <!-- UNIT 3 -->
+        <div class="unit-card">
+            <h2 class="unit-title"><span class="unit-badge">UNIT 3</span> Social Media Overview and Security</h2>
+            <ul class="topics-list">
+                <li><span class="topic-strong">Privacy & Security Issues:</span> Challenges and specific security risks related to online social networks.</li>
+                <li><span class="topic-strong">Legal Aspects of Content:</span> Laws regarding inappropriate content, as well as mechanisms for flagging and reporting.</li>
+                <li><span class="topic-strong">Best Practices:</span> Standard guidelines for safe social media use.</li>
+            </ul>
+        </div>
+
+        <!-- UNIT 4 -->
+        <div class="unit-card">
+            <h2 class="unit-title"><span class="unit-badge">UNIT 4</span> Introduction to Intellectual Property Rights (IPR)</h2>
+            <ul class="topics-list">
+                <li><span class="topic-strong">Core Concepts of IPR:</span> Detailed understanding of Patents, Copyrights, Trademarks, and Geographical Indications (GI).</li>
+                <li><span class="topic-strong">International Frameworks:</span> The role of WIPO, TRIPS, and WTO in regulating IPR.</li>
+                <li><span class="topic-strong">Registration Processes:</span> Practical aspects of registering various IPRs in India and abroad.</li>
+            </ul>
+        </div>
+
+        <!-- UNIT 5 -->
+        <div class="unit-card">
+            <h2 class="unit-title"><span class="unit-badge">UNIT 5</span> Patents</h2>
+            <ul class="topics-list">
+                <li><span class="topic-strong">Patent Classification:</span> Difference between Product Patents and Process Patents.</li>
+                <li><span class="topic-strong">Registration Lifecycle:</span> Steps for patent search, registration, and granting.</li>
+                <li><span class="topic-strong">Rights and Infringement:</span> Exclusive rights of patent holders and what constitutes an infringement.</li>
+                <li><span class="topic-strong">Legal Procedures:</span> Concepts like compulsory licensing, revocation of patents, and the Patent Cooperation Treaty.</li>
+            </ul>
+        </div>
+
+        <!-- EXAM STRATEGY SUMMARY -->
+        <div class="summary-card">
+            <h2 class="summary-title">📋 Exam Strategy Summary (High-Yield Focus)</h2>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>Focus Area</th>
+                        <th>Key Strategy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Definitions & Classifications</strong></td>
+                        <td>Ensure you can define various cyber offences (Unit 1) and IPR types (Unit 4).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Legal Frameworks</strong></td>
+                        <td>Memorize key sections of the IT Act 2000 and the roles of international bodies like WIPO.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Practical Procedures</strong></td>
+                        <td>Be prepared to explain the step-by-step process for patent registration and reporting social media violations.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- PRACTICE QUESTIONS -->
+        <div class="questions-card">
+            <h2 class="questions-title">🎯 Practice Questions</h2>
+            <ol class="questions-list">
+                <li>What are the most likely exam topics (high yield) from UNIT 2 (Cybercrime and Cyber Law) in the Cyber Law & Intellectual Property syllabus?</li>
+                <li>Which topics from the IPR section (UNIT 4 and UNIT 5 combined) are critical and high-yield for examination purposes?</li>
+                <li>What are the most essential topics to focus on for scoring well in the first half of the Cyber Law syllabus (UNIT 1 and UNIT 3)?</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
